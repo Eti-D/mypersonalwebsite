@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comfort Eti Daniel | Communications and PR Specialist for Health Brands</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       CSS VARIABLES & BASE STYLES
+       ========================================================================== */
+    :root {
+      --bg-main: #FBFAF6;
+      --bg-card: #FFFFFF;
+      --bg-dark: #0F2E22;
+      --text-main: #1C2826;
+      --text-muted: #52605D;
+      --text-light: #F4F6F5;
+      
+      --primary: #1B4332;
+      --primary-teal: #14706C;
+      --accent-sky: #5FB3D9;
+      --accent-lemon: #C3D94E;
+      --border-color: #E2E8E5;
+      
+      --font-heading: 'Fraunces', serif;
+      --font-body: 'IBM Plex Sans', sans-serif;
+      --max-width: 1200px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* Container Utility */
+    .container {
+      width: 90%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 4rem 0;
+    }
+
+    .section-kicker {
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      font-weight: 600;
+      color: var(--primary-teal);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-heading {
+      font-family: var(--font-heading);
+      font-size: 2.25rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    /* ==========================================================================
+       NAVIGATION
+       ========================================================================== */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(251, 250, 246, 0.95);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 0;
+    }
+
+    .logo {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-teal);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: #FFF;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-teal);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--primary);
+      color: #FFF;
+    }
+
+    /* ==========================================================================
+       HERO SECTION
+       ========================================================================== */
+    .hero {
+      padding: 5rem 0 3rem;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero-eyebrow {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--primary-teal);
+      margin-bottom: 1rem;
+    }
+
+    .hero-headline {
+      font-family: var(--font-heading);
+      font-size: 3.25rem;
+      line-height: 1.15;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-subheading {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    /* ==========================================================================
+       STATS BAR
+       ========================================================================== */
+    .stats-bar {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      padding: 3rem 0;
+      margin-top: 2rem;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .stat-number {
+      font-family: var(--font-heading);
+      font-size: 2.75rem;
+      color: var(--accent-lemon);
+      font-weight: 700;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    /* ==========================================================================
+       WORK SECTION (HORIZONTALLY SCROLLABLE CASE STUDIES)
+       ========================================================================== */
+    .work-intro {
+      margin-bottom: 2rem;
+    }
+
+    .horizontal-scroll-wrapper {
+      display: flex;
+      gap: 2rem;
+      overflow-x: auto;
+      padding-bottom: 2rem;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .horizontal-scroll-wrapper::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .horizontal-scroll-wrapper::-webkit-scrollbar-track {
+      background: var(--border-color);
+      border-radius: 4px;
+    }
+
+    .horizontal-scroll-wrapper::-webkit-scrollbar-thumb {
+      background: var(--primary-teal);
+      border-radius: 4px;
+    }
+
+    .case-study-card {
+      flex: 0 0 85%;
+      max-width: 650px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 2.5rem;
+      scroll-snap-align: start;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-tag {
+      display: inline-block;
+      background: rgba(95, 179, 217, 0.15);
+      color: var(--primary-teal);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+    }
+
+    .client-line {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .card-section-title {
+      font-weight: 600;
+      color: var(--primary);
+      margin-top: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .results-list {
+      margin-left: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .results-list li {
+      list-style-type: disc;
+      margin-bottom: 0.4rem;
+      font-size: 0.95rem;
+    }
+
+    /* Accordion Details for Full Story */
+    details {
+      margin-top: 1.5rem;
+      border-top: 1px solid var(--border-color);
+      padding-top: 1rem;
+    }
+
+    summary {
+      font-weight: 600;
+      color: var(--primary-teal);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    summary:hover {
+      color: var(--primary);
+    }
+
+    details[open] summary {
+      margin-bottom: 0.75rem;
+    }
+
+    .full-story-text {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      white-space: pre-line;
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       BRAND PILLARS SECTION (REPLACES SKILLS)
+       ========================================================================== */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .pillar-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-top: 4px solid var(--primary-teal);
+      border-radius: 6px;
+      padding: 2rem;
+    }
+
+    .pillar-title {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 1.25rem;
+    }
+
+    .pillar-list li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+      color: var(--text-main);
+    }
+
+    .pillar-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--primary-teal);
+      font-weight: bold;
+    }
+
+    /* ==========================================================================
+       CLIENT LOGOS (INFINITE ANIMATED HORIZONTAL TICKER)
+       ========================================================================== */
+    .clients-ticker-container {
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      padding: 2rem 0;
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      background: var(--bg-card);
+    }
+
+    .ticker-track {
+      display: inline-flex;
+      gap: 3rem;
+      animation: marquee 25s linear infinite;
+    }
+
+    .ticker-track:hover {
+      animation-play-state: paused;
+    }
+
+    .logo-item {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ==========================================================================
+       REVIEWS SECTION (HORIZONTALLY SCROLLABLE)
+       ========================================================================== */
+    .reviews-wrapper {
+      display: flex;
+      gap: 2rem;
+      overflow-x: auto;
+      padding-bottom: 2rem;
+      scroll-snap-type: x mandatory;
+    }
+
+    .reviews-wrapper::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .reviews-wrapper::-webkit-scrollbar-track {
+      background: var(--border-color);
+    }
+
+    .reviews-wrapper::-webkit-scrollbar-thumb {
+      background: var(--primary-teal);
+      border-radius: 4px;
+    }
+
+    .review-card {
+      flex: 0 0 80%;
+      max-width: 500px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 2rem;
+      scroll-snap-align: start;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .review-text {
+      font-style: italic;
+      color: var(--text-main);
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
+
+    .review-author {
+      font-weight: 600;
+      color: var(--primary);
+      font-size: 0.95rem;
+    }
+
+    .review-role {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       ABOUT SECTION
+       ========================================================================== */
+    .about-content p {
+      margin-bottom: 1.25rem;
+      font-size: 1.05rem;
+      color: var(--text-main);
+    }
+
+    .about-lead {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      color: var(--primary);
+      line-height: 1.4;
+      margin-bottom: 1.5rem !important;
+    }
+
+    /* ==========================================================================
+       CONTACT SECTION & FOOTER
+       ========================================================================== */
+    .contact-section {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      padding: 5rem 0 3rem;
+    }
+
+    .contact-section .section-kicker {
+      color: var(--accent-lemon);
+    }
+
+    .contact-section .section-heading {
+      color: #FFF;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.75rem;
+      border-radius: 4px;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.1);
+      color: #FFF;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.25s ease;
+    }
+
+    .contact-btn:hover {
+      background: var(--accent-lemon);
+      color: var(--bg-dark);
+      border-color: var(--accent-lemon);
+    }
+
+    footer {
+      background-color: #081B14;
+      color: rgba(255, 255, 255, 0.6);
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* ==========================================================================
+       RESPONSIVE DESIGN
+       ========================================================================== */
+    @media (max-width: 768px) {
+      .hero-headline {
+        font-size: 2.25rem;
+      }
+
+      .nav-links {
+        display: none; /* Simplification for small screens */
+      }
+
+      .case-study-card, .review-card {
+        flex: 0 0 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header>
+    <div class="container nav-container">
+      <a href="#" class="logo">Comfort Eti Daniel</a>
+      <nav class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#pillars">Pillars</a>
+        <a href="#clients">Clients</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="btn btn-primary">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero container">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Comfort Eti Daniel</div>
+      <h1 class="hero-headline">The Communications and PR Specialist for Health Brands</h1>
+      <p class="hero-subheading">I build the systems that turn health brands into brands people trust.</p>
+      <div class="hero-buttons">
+        <a href="#work" class="btn btn-primary">See the work</a>
+        <a href="#contact" class="btn btn-secondary">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section class="stats-bar">
+    <div class="container stats-grid">
+      <div>
+        <div class="stat-number">6 yrs</div>
+        <div class="stat-label">In communications and PR</div>
+      </div>
+      <div>
+        <div class="stat-number">30+</div>
+        <div class="stat-label">Brands worked with</div>
+      </div>
+      <div>
+        <div class="stat-number">100+</div>
+        <div class="stat-label">Projects delivered</div>
+      </div>
+      <div>
+        <div class="stat-number">1</div>
+        <div class="stat-label">Award-winning campaign entry</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK SECTION -->
+  <section id="work" class="container">
+    <div class="work-intro">
+      <div class="section-kicker">What I Have Done</div>
+      <h2 class="section-heading">CASE STUDIES</h2>
+      <p style="color: var(--text-muted);">Each case study below highlights the challenge, the solution, the results, and the full story behind it.</p>
+    </div>
+
+    <!-- Horizontally Scrollable Cards -->
+    <div class="horizontal-scroll-wrapper">
+      
+      <!-- CASE STUDY 1 -->
+      <article class="case-study-card">
+        <div>
+          <span class="card-tag">Building KILEN’s brand communications structure</span>
+          <div class="client-line">KILEN Global — Pioneer Communications Manager</div>
+          
+          <div class="card-section-title">Challenge</div>
+          <p style="font-size:0.95rem; color:var(--text-muted);">KILEN Global, a closed-membership leadership network, had no communications infrastructure in place. Growing and retaining its membership base required a structured system to plan, produce, and track content, both internally and externally, with nothing existing to build from.</p>
+          
+          <div class="card-section-title">Solution</div>
+          <p style="font-size:0.95rem; color:var(--text-muted);">Brought on as the network's pioneer Communications Manager to build the function from zero — designing a content framework and tagging system, managing the full content lifecycle, building and leading a content and media team, and directing communications strategy across campaigns and events.</p>
+          
+          <div class="card-section-title">Results</div>
+          <ul class="results-list">
+            <li>Designed and implemented end-to-end communications (internal and external) for 30+ webinars and virtual events, 3 annual leadership conferences each hosting 500+ participants, and 3 leadership campaign projects</li>
+            <li>Facilitated membership buy-in and sustained internal engagement, driving 250% growth in a closed-membership network, alongside an 80% increase in social media engagement within 6 months</li>
+            <li>First comprehensive content management structure implemented, improving reporting efficiency and brand consistency across the organisation</li>
+          </ul>
+        </div>
+
+        <details>
+          <summary>Read full story</summary>
+          <div class="full-story-text">
+            KILEN Global needed more than content; it needed infrastructure, with the added complexity of a closed-membership model: growth here meant facilitating buy-in rather than simply broadening reach, while consistently maintaining interest among existing members.
+
+            The engagement began with an audit of how the network communicated internally and externally, followed by the design of a content framework and tagging system that made resources easy to organise, track, and reuse.
+
+            A cross-functional content and media team was recruited and trained to execute against this framework, with clear delegation, editorial review, and quality control built into the workflow.
+
+            Communications strategy was then extended across the network's full calendar, ensuring every touchpoint reinforced the same narrative and consistently converted interest into membership.
+
+            The result was a repeatable system that didn't just produce content, but scaled both visibility and membership growth in a closed network where every gain had to be earned through trust.
+          </div>
+        </details>
+      </article>
+
+      <!-- CASE STUDY 2 -->
+      <article class="case-study-card">
+        <div>
+          <span class="card-tag">Organised and directed Parallax (a theatre production) in 3 weeks</span>
+          <div class="client-line">Shekinah Theatre Production — Production Director</div>
+          
+          <div class="card-section-title">Challenge</div>
+          <p style="font-size:0.95rem; color:var(--text-muted);">A full theatre production needed to be delivered in a 3-week window, requiring two parallel tracks of execution: first, the internal end, which included rehearsals, story interpretation, internal logistics, effects, and membership welfare management. Then, the external side of things, which included fundraising, publicity, venue logistics, etc.</p>
+          
+          <div class="card-section-title">Solution</div>
+          <p style="font-size:0.95rem; color:var(--text-muted);">Took on production direction, managing both execution tracks simultaneously through a delegation-heavy management system, a targeted pocket-fundraising system built around specific brands and individuals of interest, and an intensive multi-channel publicity campaign.</p>
+          
+          <div class="card-section-title">Results</div>
+          <ul class="results-list">
+            <li>About ₦2 million raised in cash, plus endorsement materials valued at over ₦8 million</li>
+            <li>2,000+ in-person attendees and 2,000+ virtual viewers across Facebook and YouTube</li>
+            <li>Full production delivered on schedule despite the compressed timeline</li>
+          </ul>
+        </div>
+
+        <details>
+          <summary>Read full story</summary>
+          <div class="full-story-text">
+            The constraint wasn't getting the creative work project completed, but doing so within a very slim timeline given the scope of the project. With three weeks to turn a concept into a live production, the priority was building a system that could move fast without losing quality.
+
+            A management structure was designed around clear delegation and rapid follow-up, allowing rehearsals, story development, and technical elements to progress in parallel rather than in sequence.
+
+            Externally, a targeted pocket-fundraising system was designed around specific brands and individuals of interest, moving fundraising from opportunistic to deliberate.
+
+            Publicity ran alongside this on multiple fronts, incorporating guerrilla stunts, flash mobs, and a broader publicity campaign, layered with conventional digital and physical publicity measures — to build anticipation and drive turnout.
+
+            The outcome was a fully funded, well-attended, high-quality production delivered inside an almost impossible timeline, proof that speed and structure aren't mutually exclusive when the system is designed right.
+          </div>
+        </details>
+      </article>
+
+      <!-- CASE STUDY 3 -->
+      <article class="case-study-card">
+        <div>
+          <span class="card-tag">Designing an award-winning entry for #LoveMyDad campaign</span>
+          <div class="client-line">Men's mental health campaign entry — Strategy & execution</div>
+          
+          <div class="card-section-title">Challenge</div>
+          <p style="font-size:0.95rem; color:var(--text-muted);">An entry was needed for the #LoveMyDad men's mental health campaign, centred on making fathers feel seen, but the brand behind it had fewer than 500 followers, competing against personal brands with 20,000+.</p>
+          
+          <div class="card-section-title">Solution</div>
+          <p style="font-size:0.95rem; color:var(--text-muted);">A strategy built on three pillars — Impact, Visibility, and Scalability — combining first-person storytelling, targeted outreach to build early momentum, and a format designed to be easily replicated by others.</p>
+          
+          <div class="card-section-title">Results</div>
+          <ul class="results-list">
+            <li>5,000+ views within 2 days, on a platform that typically underperforms for video content</li>
+            <li>Declared winner of the #LoveMyDad campaign</li>
+            <li>Over 200 direct feedback responses on the entry's impact, including people who went on to replicate a similar format to appreciate their own fathers and loved ones</li>
+          </ul>
+        </div>
+
+        <details>
+          <summary>Read full story</summary>
+          <div class="full-story-text">
+            The follower gap made this a strategy problem before it was a creative one. Rather than compete on reach, the approach concentrated on emotional precision and distribution efficiency.
+
+            The entry centred on a daughter writing and reading a letter to her father, walking through defining moments from birth to the present day, anchored around a moment where he did something extraordinary. This was designed to align the entry directly with the campaign's core idea of appreciating fathers and making them feel seen.
+
+            Visual breaks were built in to increase viewer retention, while an original, non-aesthetical background and mobile-shot footage were used deliberately to heighten emotional authenticity and make the format feel easily replicable by anyone watching.
+
+            A brand profile audit and perception refresh preceded the release to strengthen credibility, and a small, targeted outreach effort activated early supporters using a teaser clip to build momentum despite the limited following.
+
+            The result was a win against far larger competitors, and a format simple enough to spur people’s desire to recreate it for their own fathers and loved ones.
+          </div>
+        </details>
+      </article>
+
+      <!-- CASE STUDY 4 -->
+      <article class="case-study-card">
+        <div>
+          <span class="card-tag">Executive PR Strategy</span>
+          <div class="client-line">Maternal health brand — Executive PR Strategy</div>
+          
+          <div class="card-section-title">Challenge</div>
+          <p style="font-size:0.95rem; color:var(--text-muted);">An executive director at a maternal health brand needed increased visibility and reputation on LinkedIn, in a landscape where executive thought leadership content is common and easily overlooked.</p>
+          
+          <div class="card-section-title">Solution</div>
+          <p style="font-size:0.95rem; color:var(--text-muted);">Designed an original content format — the Textual Breakfast Show — an article structured to simulate a live breakfast meeting, paired with a targeted publicity push around the release.</p>
+          
+          <div class="card-section-title">Results</div>
+          <ul class="results-list">
+            <li>45% increase in visibility within 48 hours, measured through follower count, impressions, and profile views</li>
+          </ul>
+        </div>
+
+        <details>
+          <summary>Read full story</summary>
+          <div class="full-story-text">
+            Standing out on a crowded platform required a format, not just a message. The Textual Breakfast Show was conceived as a distinct content experience; its structure and theme were designed to generate curiosity before the content was even read.
+
+            The piece was titled "Pregnancy Begins with Him Too: How His Sperm Quality Shapes Her Pregnancy Experience," a title built to challenge assumptions and demand a second look. Publicity around the release leaned into that novelty, positioning both the format and the theme as the hook.
+
+            The rapid, measurable lift in visibility within 48 hours confirmed the approach: on a platform saturated with conventional posts, a well-designed format paired with a provocative theme can outperform generic executive content.
+          </div>
+        </details>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- BRAND PILLARS SECTION (CORRECTION 1) -->
+  <section id="pillars" class="container">
+    <div class="section-kicker">How I Work</div>
+    <h2 class="section-heading">BRAND PILLARS</h2>
+    
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <h3 class="pillar-title">HEALTH</h3>
+        <ul class="pillar-list">
+          <li>Research & Knowledge</li>
+          <li>Public Health & Advocacy</li>
+        </ul>
+      </div>
+
+      <div class="pillar-card">
+        <h3 class="pillar-title">COMMUNICATION</h3>
+        <ul class="pillar-list">
+          <li>Strategic Communications</li>
+        </ul>
+      </div>
+
+      <div class="pillar-card">
+        <h3 class="pillar-title">BRANDS & ORGANISATIONS</h3>
+        <ul class="pillar-list">
+          <li>Brand Strategy</li>
+          <li>PR & Reputation Management</li>
+          <li>Campaign & Projects</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENT LOGOS ANIMATED TICKER (CORRECTION 4) -->
+  <section id="clients" style="padding: 2rem 0;">
+    <div class="container" style="padding-bottom: 1rem;">
+      <div class="section-kicker">Trusted By</div>
+      <h2 class="section-heading" style="margin-bottom:0;">Brands I've worked with</h2>
+    </div>
+
+    <div class="clients-ticker-container">
+      <div class="ticker-track">
+        <!-- Original set -->
+        <div class="logo-item" style="color: #2B5B84;">AriCares Health</div>
+        <div class="logo-item" style="color: #D9381E;">Behind the Reels (BTR)</div>
+        <div class="logo-item" style="color: #00A86B;">Acealth</div>
+        <div class="logo-item" style="color: #6C5CE7;">Primegate Digital</div>
+        <div class="logo-item" style="color: #0A3D62;">The King's Pharmaceuticals</div>
+        <div class="logo-item" style="color: #1B4332;">KILEN Global</div>
+        <div class="logo-item" style="color: #C29B38;">L'ECOLE Consulting</div>
+        
+        <!-- Duplicated set for seamless loop -->
+        <div class="logo-item" style="color: #2B5B84;">AriCares Health</div>
+        <div class="logo-item" style="color: #D9381E;">Behind the Reels (BTR)</div>
+        <div class="logo-item" style="color: #00A86B;">Acealth</div>
+        <div class="logo-item" style="color: #6C5CE7;">Primegate Digital</div>
+        <div class="logo-item" style="color: #0A3D62;">The King's Pharmaceuticals</div>
+        <div class="logo-item" style="color: #1B4332;">KILEN Global</div>
+        <div class="logo-item" style="color: #C29B38;">L'ECOLE Consulting</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS SECTION (CORRECTION 3) -->
+  <section id="reviews" class="container">
+    <div class="section-kicker">Kind Words</div>
+    <h2 class="section-heading">What clients say</h2>
+
+    <div class="reviews-wrapper">
+      
+      <div class="review-card">
+        <p class="review-text">"Working with Comfort Daniel has been an absolute delight. Her ability to conduct in-depth research, design a well-structured communications funnel, and carry out reviews and reporting is unmatched. Her professionalism and attention to detail make her invaluable. Comfort Daniel is simply outstanding."</p>
+        <div>
+          <div class="review-author">Dr. Emmanuel Obaseki (PharmD)</div>
+          <div class="review-role">Healthcare Management and Sales Consultant</div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <p class="review-text">"I have worked closely with Comfort Eti Daniel for over four years and have consistently been impressed by her professionalism, creativity, and exceptional skills in brand communications and strategy. Her expertise in stakeholder management and social media strategy significantly contributed to the success of our projects. She's also an excellent team player and a reliable, inspiring leader — an asset to any organisation."</p>
+        <div>
+          <div class="review-author">Dr. BenPaul Ewureje</div>
+          <div class="review-role">Managing Director, KILEN Global</div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <p class="review-text">"One consultation with Comfort was all it took. She walked me through how to position and pitch myself to brands, even without years of experience behind me — and within two weeks, I landed my first public health campaign collaboration. Her guidance is clear, practical, and genuinely transformative."</p>
+        <div>
+          <div class="review-author">Glory Udoma</div>
+          <div class="review-role">Public Health Strategist</div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <p class="review-text">"A clarity call with Comfort was eye-opening — real examples, no fluff, just practical steps that made success feel achievable. If you're a founder or professional in health and wellness looking for clarity and strategy that actually moves the needle, she's the person to work with."</p>
+        <div>
+          <div class="review-author">Joan Alupo</div>
+          <div class="review-role">Lead Strategist, Lyfex Africa</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="container">
+    <div class="section-kicker">About</div>
+    <h2 class="section-heading">My story</h2>
+    <div class="about-content" style="max-width: 800px;">
+      <p class="about-lead">Long before I could read, I'd already decided where I belonged: the health space.</p>
+      <p>What took longer to find was the bridge; the point where that instinct could meet my other obsession, communications, and the psychology of what actually moves people to act. That bridge is what I've spent six years building.</p>
+      <p>Today, I work at the intersection of health, communications, and technology, designing the strategy, systems, and stories that turn health brands from overlooked into unmissable. Not through noise, but through precision: understanding what a brand needs to do and exactly how to do it so it lands the desired outcome.</p>
+      <p>Across 30+ brands and 100+ projects, the demands have varied, but at every point, one thing has remained the same: strategy that gets brands the results they're actually chasing.</p>
+      <p>I'm not merely looking for the next project, but building the next chapter, and I'd love for your brand to be part of it.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION (CORRECTION 5) -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-kicker">Get In Touch</div>
+      <h2 class="section-heading">Let's build real solutions that drive impact.</h2>
+      <p style="max-width: 600px; opacity: 0.9;">If you're looking for someone to manage communications, I'd love to talk about what that could look like for your team.</p>
+      
+      <div class="contact-links">
+        <a href="mailto:comfortetidaniel@gmail.com" class="contact-btn">
+          Email me
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-btn">
+          Connect on LinkedIn
+        </a>
+        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="contact-btn">
+          Message on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container" style="padding: 0;">
+      <p><strong>Comfort Eti Daniel</strong></p>
+      <p>Communications & PR Specialist for Health Brands</p>
+    </div>
+  </footer>
+
+</body>
+</html>
